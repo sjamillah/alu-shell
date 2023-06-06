@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#A script to display time using while loop and head command for the first 70 lines
+
+head -70 
+hours=0
+while ((hours<=12))
+do
+echo "$hours"
+minutes=1
+while ((minutes<=59))
+do
+echo "$minutes"
+minutes=$((minutes+1))
+done
+hours=$((hours+1))
+done
