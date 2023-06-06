@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 #output Best School 10 times using until loop
 i=1
-until ((i<=10));
+until false;
 do 
 echo "Best School"
 i=$((i+1))
+if ((i<=10));
+then
+        continue
+else
+	break
+fi
 done
