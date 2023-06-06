@@ -15,6 +15,6 @@ case "$i" in
   echo "bad luck from Italy"
    ;;
 esac
-((i+1))
-echo "$i"
+i=$((i+1))
+echo "i"
 done
