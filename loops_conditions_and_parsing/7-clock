@@ -5,11 +5,11 @@ hours=0
 while ((hours<=12))
 do
 echo "$hours"
+hours=$((hours+1))
 minutes=1
 while ((minutes<=59))
 do
 echo "$minutes"
 minutes=$((minutes+1))
 done
-hours=$((hours+1))
 done
