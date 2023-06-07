@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #A script to give information of a file
 
-touch school
 file="school"
 if [ -e "$file" ];
 then
