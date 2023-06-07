@@ -2,7 +2,7 @@
 #A script to display time using while loop and head command for the first 70 lines
 
 hours=0
-head -n 70 /loops_conditions_and_parsing/7-clock | while ((hours<=12))
+while ((hours<=12))
 do
 echo "Hour: $hours"
 minutes=1
