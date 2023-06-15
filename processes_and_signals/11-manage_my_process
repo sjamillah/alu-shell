@@ -15,13 +15,8 @@ if [ "$command" == "start" ]; then
   echo "manage_my_process started"
 
 elif [ "$command" == "stop" ]; then
-if [ -e "/var/run/my_process.pid" ]; then
-       	pkill -f './manage_my_process' 
-	rm /var/run/my_process.pid
+ [ -e "/var/run/my_process.pid" ] && pkill -f './manage_my_process' && rm /var/run/my_process.pid
   echo "manage_my_process stopped"
-else
-	echo "manage_my_process is not running"
-fi
 
 elif [ "$command" == "restart" ]; then
 
@@ -33,3 +28,4 @@ else
  echo "Usage: manage_my_process {start|stop|restart}"
  exit  1
 fi
+
