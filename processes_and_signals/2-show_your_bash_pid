@@ -2,4 +2,4 @@
 # A script to display lines containing bash word and show bash pid
 # shellcheck disable=SC2009
 
-source "${0%/*}/1-list_your_processes | grep bash 
+source "${0%/*}/1-list_your_processes | grep bash" 
