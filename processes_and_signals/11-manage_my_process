@@ -25,7 +25,7 @@ stop() {
 
 restart() {
   stop
-  start
+   start
 }
 
 if (( $# == 1 )) && [[ -v "MESSAGES[$1]" ]]
