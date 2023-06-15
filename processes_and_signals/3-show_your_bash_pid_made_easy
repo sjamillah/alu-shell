@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # A script to display processes's pid and name with bash word
 
-pgrep bash
+pgrep -i bash
