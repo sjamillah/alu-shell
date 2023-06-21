@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
 # A script to manage deamon
 
-command="$1"
-
 killer() {
   kill "$(pgrep -f /manage_my_process)"
   rm -f /var/run/my_process.pid &
 }
 
-if [[ "$command" == "start" ]]; then
+if [[ "$1" == "start" ]]; then
   ./manage_my_process &
   echo "$!" > /var/run/my_process.pid
   echo "manage_my_process started"
 
-elif [[ "$command" == "stop" ]]; then
+elif [[ "$1" == "stop" ]]; then
   killer;
   echo "manage_my_process stopped"
 
-elif [[ "$command" == "restart" ]]; then
+elif [[ "$1" == "restart" ]]; then
   killer; ./manage_my_process &
   echo "$!" > /var/run/my_process.pid
   echo "manage_my_process restarted"
