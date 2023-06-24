@@ -30,7 +30,7 @@ restart() {
 
 if (( $# == 1 )) && [[ -v "MESSAGES[$1]" ]]
 then
-  "$1" && printf '%s %s\n' "${PROGRAM}" "${MESSAGES[$1]}"
+  "$!" && printf '%s %s\n' "${PROGRAM}" "${MESSAGES[$1]}"
 else
   printf 'Usage: %s {start|stop|restart}\n' "${PROGRAM}"
   exit 1
